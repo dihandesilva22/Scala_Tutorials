@@ -1,6 +1,6 @@
 import scala.io.StdIn.readInt;
 
-object Q4 extends App{
+object Q2 extends App{
 
     print("Input an integer: ");
     var num = readInt();

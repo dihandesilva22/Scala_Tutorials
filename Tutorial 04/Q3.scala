@@ -1,4 +1,4 @@
-object Q5 extends App{
+object Q3 extends App{
     def toUpper(input:String):String = {
         input.toUpperCase();
     }
