@@ -10,8 +10,8 @@ object Q1 extends App{
         
     val decrypt = (ch:Char,key:Int,alphabt:String) => 
         if(alphabt.indexOf(ch.toUpper)>=0) {
-            if(alphabt.indexOf(ch.toUpper)-key>=0) alphabt((alphabt.indexOf(ch.toUpper)-key)%alphabt.size)
-            else alphabt(((alphabt.size-1)-alphabt.indexOf(ch.toUpper)))
+            if(alphabt.indexOf(ch.toUpper)-key>=0) alphabt((alphabt.indexOf(ch.toUpper)-key))
+            else alphabt(((alphabt.size)+(alphabt.indexOf(ch.toUpper)-key)))
         }
         else ch
 
