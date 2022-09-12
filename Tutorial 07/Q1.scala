@@ -4,17 +4,18 @@ class Rational(num:Int,den:Int){
     private def gcd(a: Int, b: Int): Int = {
         if(b == 0) a 
         else {
-            if(a<b) gcd(b,a)
-            else gcd(b, a%b)
+            if(a<Math.abs(b)) gcd(Math.abs(b),a)
+            else gcd(Math.abs(b), a%Math.abs(b))
         } 
     }
+    val divisor = gcd(num,den);
 
-    val numer = num / gcd(num, den)
-    val denom = den / gcd(num, den)
+    val numer:Int = num/divisor;
+    val denom:Int = den/divisor;
 
     def neg = new Rational(-this.num,this.den)
 
-    override def toString() = numer+"/"+denom;
+    override def toString() = s"$numer/$denom";
 }
 
 object Q1 extends App{
